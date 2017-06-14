@@ -99,3 +99,7 @@ ENV/
 
 # mkdocs documentation
 /site
+
+# PyCharm
+.idea/**
+!/.idea/runConfigurations/RunTests.xml
