@@ -161,12 +161,14 @@ class Feed(object):
         drop_invalid_columns,
         )
     from .stop_external_ids import get_stop_external_ids
+    from .stop_time_limitations import get_stop_time_limitations
 
 
     def __init__(self, dist_units, agency=None, stops=None, routes=None,
       trips=None, stop_times=None, calendar=None, calendar_dates=None,
       fare_attributes=None, fare_rules=None, shapes=None,
-      frequencies=None, transfers=None, feed_info=None, stop_external_ids=None):
+      frequencies=None, transfers=None, feed_info=None, stop_external_ids=None,
+      stop_time_limitations=None):
         """
         Assume that every non-None input is a Pandas DataFrame,
         except for ``dist_units`` which should be a string in

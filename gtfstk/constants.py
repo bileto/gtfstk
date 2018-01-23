@@ -104,6 +104,9 @@ rows = [
     ['stop_external_ids', True, 'stop_id', True, 'str'],
     ['stop_external_ids', True, 'type', True, 'str'],
     ['stop_external_ids', True, 'id', True, 'str'],
+    ['stop_time_limitations', True, 'trip_id', True, 'str'],
+    ['stop_time_limitations', True, 'stop_id', True, 'str'],
+    ['stop_time_limitations', True, 'group_id', True, 'str'],
 ]
 GTFS_REF = pd.DataFrame(rows, columns=columns)
 
@@ -134,7 +137,8 @@ FEED_ATTRS_1 = [
     'trips',
     'transfers',
     'dist_units',
-    'stop_external_ids'
+    'stop_external_ids',
+    'stop_time_limitations',
 ]
 
 #: Secondary feed attributes; derived from primary ones
